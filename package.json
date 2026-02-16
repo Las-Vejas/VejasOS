@@ -13,7 +13,7 @@
     "@lucide/astro": "^0.564.0",
     "@tabler/icons-react": "^3.36.1",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.2",
+    "geist": "^1.7.0",
     "lucide": "^0.564.0",
     "svelte": "^5.51.1",
     "tailwindcss": "^4.1.18",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@lucide/svelte": "^0.564.0",
+    "astro": "^5.17.2",
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.4.1",
     "tailwind-variants": "^3.2.2",

@@ -3,15 +3,32 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import { Button } from '$lib/components/ui/button';
-import {Send, Github} from '@lucide/astro'
+import {Send, Github, X} from '@lucide/astro'
 ---
+
+<script src="../scripts/script.js"></script>
+
 <Layout>
-	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-blue-950 p-5 flex flex-col gap-2 rounded-2xl">
-		<img src="https://cachet.dunkirk.sh/users/U0930DMR4BA/r" alt="My Slack Profile Picture" class="w-26 h-26 rounded-full">
-		<h1 class="text-3xl font-bold">Welcome to <span class="font-mono">VejasOS</span></h1>
-		<p class="text-lg">I have a couple of projects that vary from hardware to software!</p>
-		<div class="flex flex-row gap-4 content-between w-full ">
-			<Button href="https://github.com/las-vejas" target="_blank" size='default' class="rounded-full"}><Github/>My GitHub</Button>
-			<Button href="https://hackclub.enterprise.slack.com/team/U0930DMR4BA" target="_blank"><Send data-icon="inline-end"/>Find me on Slack</Button>
+	<div class="justify-between items-center flex w-full px-6 py-4 backdrop-blur-sm bg-white/15">
+		<a href="/" id="welcomeopen" class="font-bold border border-blue-800/50 px-4 py-1 rounded-lg bg-white/50">VejasOS</a>
+		<p id="current-time" class="border border-blue-800/50 px-4 py-1 rounded-lg bg-white/50">--:--:--</p>
+	</div>
+
+	<div id="welcome" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2 rounded-2xl bg-white">
+		<div id="welcomeheader" class="select-none cursor-grab h-6 flex items-center z-10 rounded-t-xl">
+			<div id="welcomeclose" class="ml-4 mt-4 w-5 h-5 rounded-full bg-red-500 cursor-pointer flex items-center justify-center">
+				<X size={15} class="text-red-900/80"/>
+			</div>
+		</div>
+			
+		<div id="welcomecontent" class="p-5 space-x-2 z-0">
+			<img src="https://cachet.dunkirk.sh/users/U0930DMR4BA/r" alt="My Slack Profile Picture" class="w-26 h-26 mb-4 rounded-full">
+			<h1 class="text-3xl font-bold">Welcome to <span class="font-mono">VejasOS</span></h1>
+			<p class="text-lg mb-2">I have a couple of projects that vary from hardware to software!</p>
+			<div class="flex flex-row gap-4 content-between w-full ">
+				<Button href="https://github.com/las-vejas" target="_blank" size='default' class=""><Github/>My GitHub</Button>
+				<Button href="https://hackclub.enterprise.slack.com/team/U0930DMR4BA" target="_blank" variant='ghost'><Send/>Find me on Slack</Button>
+			</div>
 		</div>
 	</div>
+	
