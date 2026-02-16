@@ -3,11 +3,15 @@ import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import { Button } from '$lib/components/ui/button';
+import {Send, Github} from '@lucide/astro'
 ---
-
 <Layout>
-	<div class="flex flex-row gap-4 h-min w-max items-center">
-		<p>skibidi</p>
-		<Button variant="default" size='default' href={"https://youtube.com/"} target={'_blank'}>Hello diggas</Button>
+	<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-blue-950 p-5 flex flex-col gap-2 rounded-2xl">
+		<img src="https://cachet.dunkirk.sh/users/U0930DMR4BA/r" alt="My Slack Profile Picture" class="w-26 h-26 rounded-full">
+		<h1 class="text-3xl font-bold">Welcome to <span class="font-mono">VejasOS</span></h1>
+		<p class="text-lg">I have a couple of projects that vary from hardware to software!</p>
+		<div class="flex flex-row gap-4 content-between w-full ">
+			<Button href="https://github.com/las-vejas" target="_blank" size='default' class="rounded-full"}><Github/>My GitHub</Button>
+			<Button href="https://hackclub.enterprise.slack.com/team/U0930DMR4BA" target="_blank"><Send data-icon="inline-end"/>Find me on Slack</Button>
+		</div>
 	</div>
-</Layout>
